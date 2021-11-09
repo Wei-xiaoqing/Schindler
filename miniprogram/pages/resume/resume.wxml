@@ -1,0 +1,24 @@
+<!--miniprogram/pages/email.wxml-->
+<view class="pages">
+  <view class="tipss">最多可以上传3份简历
+    <van-icon name="cross" color="rgb(255, 188, 94)" />
+  </view>
+  <view class="main_file">
+    <view class="file_item">
+      <view class="file_title">简历列表</view>
+      
+    </view>
+    <van-divider />
+  </view>
+
+  <view class="contents">
+    附件简历仅在你主动投递简历时才会提供给对方，请放心上传
+  </view>
+  <view class="btn">
+    <van-uploader>
+      <view>
+        <van-icon name="plus" color="#EEEEEE" size="36rpx" />点击上传简历
+      </view>
+    </van-uploader>
+  </view>
+</view>

@@ -1,0 +1,125 @@
+<view class="container">
+    <!-- 头部职位名称等简要信息 -->
+    <view class="position-info">
+        <view class="position-info_top">
+            <text class="position-name">{{position_name}}</text>
+            <view>
+                <text class="position-de">招聘</text>
+            </view>
+        </view>
+        <view class="position-info_bottom">
+            <view class="position-info_list">
+                <text wx:for="{{position_info_list}}" class="position-info_item">{{item}}</text>
+            </view>
+            <view class="position-info_price">￥3000-5000/月</view>
+        </view>
+    </view>
+    <!-- 职位发布人 -->
+    <view class="boss">
+        <view class="boss-left">
+            <!-- /头像 -->
+            <view class="pic">
+                <image class="head-portrait" src="../../images/1.png" alt="" />
+            </view>
+            <!-- 发布人信息 -->
+            <view class="boss-info">
+                <view class="boss-info_top">
+                    <text class="boss-name">pretty savage</text>
+                    <text class="boss-state">正在活跃</text>
+                </view>
+                <view class="boss-info_bottom">
+                    <text class="company-name">天津市大学软件学院</text>
+                    <text class="company-mark">企</text>
+                </view>
+            </view>
+        </view>
+        <navigator class="boss-right">
+            <text>查看官网</text>
+            <image class="right-pic" src="../../images/right.png" />
+        </navigator>
+    </view>
+    <!-- 工作性质性别经验等等 -->
+    <view class="position-intro_list">
+        <view class="position-intro_item" wx:for="{{position_intro_list}}" wx:for-item="pil">
+            <view class="position-intro_topic">{{pil.topic}}</view>
+            <view class="position-intro_content">{{pil.content}}</view>
+        </view>
+    </view>
+    <!-- 职位描述 -->
+    <view class="position_describe">
+        <view class="describe">职位描述</view>
+        <view class="describe_list">
+            <view class="describe_list-item" wx:for="{{describe_list}}" wx:for-item="dl">
+                <text class="describe-item-topic">{{dl.topic}}</text>
+                ：
+                <textarea class="describe-item-content">{{dl.content}}</textarea>
+            </view>
+        </view>
+        <!-- 工作环境图片 -->
+        <image class="position-pic" src="../../images/position-pic.webp" />
+        <!-- 工作地点及浏览人数 -->
+        <view class="location">
+            <view class="address">工作地址：天津西青</view>
+            <view class="see_pic">
+                <image src="../../images/eyes.png" class="see-img" />
+                <text class="viewed">3000</text>
+            </view>
+        </view>
+    </view>
+    <!-- 相关职位推荐 -->
+    <!-- <view class="recommended">
+        <view class="recommended_title">相关职位推荐</view>
+        <view class="recommended-list">
+            <view class="recommended-list_item" wx:for="{{recommended}}" wx:for-item="re">
+                <view class="recommended-top">
+                    <text class="recommended-title">{{re.recommended_title}}</text>
+                    <text class="recommended-price">{{re.recommended_price}}</text>
+                </view>
+                <view class="recommended-center">
+                    <view class="recommended-info_list">
+                        <text wx:for="{{position_info_list}}" class="position-info_item">
+                            {{item}}
+                        </text>
+                    </view>
+                    <view class="recommended-requirements-list">
+                        <text class="requirements-list_item">{{re.requirements1}}</text>
+                        <text class="requirements-list_item">{{re.requirements2}}</text>
+                        <text class="requirements-list_item">{{re.requirements3}}</text>
+                    </view>
+                </view>
+                <view class="recommended-bottom">
+                    <view class="recommended-bottom-left">
+                        <image class="recommended-bottom-portrait" src="{{re.imgSrc}}" alt="" />
+                        <text class="name">{{re.name}}</text>
+                        <text class="time">{{re.time}}</text>
+                    </view>
+                    <view class="recommended-bottom-right">
+                        <view class="recommended-address">{{re.address}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+    <!-- 空间 -->
+    <view class="space"></view>
+    <!-- 底部导航栏 -->
+    <view class="navigationbar-bottom">
+        <view class="navigationbar">
+            <view class="navigationbar--left">
+                <view class="send">
+                    <image bindtap="handleShare" class="icon-fenxiang" src="../../images/fenxiang.png" />
+                    <text class="send--msg">分享</text>
+                </view>
+                <view class="fav">
+                    <image wx:if="{{ collected}}" bindtap="handleCollect" class="icon-shoucang" src="../../images/shoucang1.png" />
+                    <image wx:else bindtap="handleCollect" class="icon-shoucang" src="../../images/shoucang.png" />
+                    <text class="fav--msg">收藏</text>
+                </view>
+            </view>
+            <navigator class="navigationbar--right" url="../chat/chat">
+                <image class="icon-xiaoxi" src="../../images/xiaoxi2.png" />
+                <text class="fav--msg">立即沟通</text>
+            </navigator>
+        </view>
+    </view>
+</view>

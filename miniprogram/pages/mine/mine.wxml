@@ -1,0 +1,66 @@
+<!--pages/mine/mine.wxml-->
+<view class="bg-box">
+  <view class="profile-tip flex-c-c" catchtap="chooseImg" wx:if="{{!bgImg}}">
+    <!-- 通过是否有背景图控制出现隐藏 -->
+    <text class="iconfont icon-tupian"></text>
+    <text class="tip-text">选择你的背景图吧</text>
+  </view>
+  <image wx:if="{{bgImg}}" src="{{bgImg}}" class="bgImg" catchtap="updateImg" mode="aspectFill"></image>
+</view>
+<view class="mine-container-middle">
+  <button  class="login" wx:if="{{!userInfo}}" bindtap="login" hover-class="none">授权登录</button>
+  <view wx:else>
+    <image class="photo" src="{{userInfo.avatarUrl}}"></image>
+    <text class="name">{{userInfo.nickName}}</text>
+    <button class="button" bindtap="loginOut">退出登录</button> 
+  </view>
+
+</view>
+
+<!-- 求职必备模块 -->
+<view class="mine-container-middle">
+  <view class="mine-box-middle-tittle">
+    <view class="middle-tittle-left">求职必备</view>
+    <view class="middle-tittle-right">查看更多</view>
+
+    <view>
+      <image class="middle-tittle-img" src="../../images/go-ahead.png"></image>
+    </view>
+  </view>
+  <!-- 求职必备主体部分 -->
+  <view class="box-list">
+    <navigator class="box-list-cular" url="../resume/resume" wx:for="{{common}}" wx:key="item" hover-class="none">
+      <view>
+        <image class="middle-list-img" src="{{item.icon}}"></image>
+      </view>
+      <view class="box-list-doc">{{item.name}}</view>
+    </navigator>
+  </view>
+</view>
+<!-- 底部区域 -->
+<view class="mine-container-bottom">
+  <view class="container-bottom-body" wx:for="{{body}}" wx:for-item="body">
+    <view>
+      <image class="bottom-body-leftImg" src="{{body.img}}"></image>
+    </view>
+    <view class="bottom-body-doc">{{body.doc}}</view>
+    <view class="bottom-body-single-doc">{{body.doc2}}</view>
+    <view>
+      <image class="bottom-body-rightImg" src="{{body.pic}}"></image>
+    </view>
+  </view>
+  <view class="add-blank"></view>
+</view>
+
+<view class="mine-container-bottom">
+  <view class="container-bottom-body" wx:for="{{other}}" wx:key="item">
+    <view>
+      <image class="bottom-body-leftImg" src="{{item.icon}}"></image>
+    </view>
+    <view class="bottom-body-doc">{{item.name}}</view>
+    <view>
+      <image class="bottom-body-rightImg" src="../../images/into.png"></image>
+    </view>
+  </view>
+  <view class="add-blank"></view>
+</view>

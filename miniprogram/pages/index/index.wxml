@@ -1,0 +1,102 @@
+<view class="header">
+   <SearchInput></SearchInput>
+   <view class="container hdCon">
+      <navigator open-type="switchTab" url="/pages/index/index" class="logo">
+         <image mode="heightFix" src="/images/logo.png"></image>
+      </navigator>
+      <view class="map" bindtap="onRouterPlan">
+        <text class="city">{{city}}</text> <image mode="heightFix" src="/images/weizhi.png"></image>
+      </view>
+
+   </view>
+</view>
+<view class="banner">
+   <swiper indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay>
+      <swiper-item wx:for="{{banner}}" wx:key="item">
+         <image src="{{item.img}}"></image>
+      </swiper-item>
+   </swiper>
+</view>
+<scroll-view class="major" scroll-x>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/1.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/2.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/3.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/4.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/5.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/6.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/7.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/8.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/9.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/10.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/11.png" />
+   </navigator>
+   <navigator class="box" url="">
+      <image class="pic" src="/images/12.png" />
+   </navigator>
+</scroll-view>
+<view class="works">
+   <view class="container">
+      <view class="pubtitle">
+         <view class="txt">近期活动</view>
+         <navigator class="more">更多></navigator>
+      </view>
+      <view class="wkMain">
+         <navigator class="box" url="../position_details/position_details" wx:for="{{jobs}}" wx:key="item" hover-class="none">
+            <image class="pic" src="{{item.picture}}"></image>
+            <view class="ceng">
+               <view class="title">{{item.name}}</view>
+               <view class="price">{{item.price}}/小时</view>
+               <view class="line"></view>
+            </view>
+         </navigator>
+      </view>
+   </view>
+</view>
+<view class="dynamic">
+   <view class="container">
+      <view class="pubtitle">
+         <view class="txt">招聘预览</view>
+         <navigator class="more" hover-class="none">更多></navigator>
+      </view>
+      <view class="dyMian">
+         <navigator class="dyItem" wx:for="{{jobs}}" wx:key="item" hover-class="none">
+            <view class="pic">
+               <image src="{{item.picture}}"></image>
+            </view>
+            <view class="txt">
+               <view class="title">
+                  {{item.name}}
+               </view>
+               <view class="info">
+                  发布者：XXX <text space="ensp"> - </text> 时间:2020-05-01
+               </view>
+            </view>
+         </navigator>
+      </view>
+   </view>
+</view>
+<view class="footer">
+   <image class="pic" mode="widthFix" src="/images/logo.png"></image>
+   <view class="text">靠谱兼职平台</view>
+</view>

@@ -1,0 +1,101 @@
+/* pages/message/message.wxss */
+.navbar {
+  width: 100%;
+  height: 90rpx;
+  white-space: nowrap;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+  background: rgb(213, 227, 248);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+}
+.nav-item {
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  position: relative;
+  left: 230rpx;
+  height: 100%;
+  font-size: 28rpx;
+  display: inline-flex;
+}
+
+.nav-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 4rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+
+.tab-on {
+  color:black;
+  /* 选中放大 */
+  font-weight: 600;
+  font-weight: bolder;
+}
+.title{ 
+  width: 100%;
+  height: 80rpx;
+  background-color: #DBE7F9;
+}
+.title text{
+   margin:0 0 0 210rpx; 
+}
+span{
+left: 80px;
+}
+.box{
+  position: relative;
+  width: 100%;
+  top: 100rpx;
+  height: 200rpx;
+  border-bottom: solid 1px rgb(190, 185, 185);
+  margin-bottom: 20rpx;
+}
+.box image{
+  width: 15px;
+  height: 15px;
+}
+.photo image{
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 10px;
+  top: 11px;
+  border-radius: 50px;
+  border:6rpx solid #DAE8FA;
+}
+.message{
+  font-size: 18px;
+}
+.name{
+  position: relative;
+  left: 95px;
+  bottom: 70px;
+  font-size: 16px;
+  font-weight: 800;
+  }
+  .name image{
+    position: relative;
+    left: 24px;
+    top:2px
+  }
+  .introduce{
+    display: inline-flex;
+    position: relative;
+    left: 95px;
+    bottom: 65px;
+  }
+  .recomend{
+   position: relative;
+   left: 100px;
+  bottom: 60px;
+  width: 70%;
+  }

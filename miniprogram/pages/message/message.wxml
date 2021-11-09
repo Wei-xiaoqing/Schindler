@@ -1,0 +1,29 @@
+<!--pages/message/message.wxml-->
+<view>
+  <scroll-view scroll-x class="navbar" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+    <view class="nav-item" wx:for="{{tabs}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
+      <view class="nav-text {{index==tabCur?'tab-on':''}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <view hidden="{{tabCur !== 0}}">
+    <navigator url='../chat/chat' class="box" wx:key="unique" wx:for="{{teachersList}}">
+      <view class="photo">
+        <image src="{{ item.photo }}"></image>
+      </view>
+      <view class="message">
+        <view class="name">
+          <text>{{item.name}}</text>
+          <image class="sex" src="{{item.sex}}"></image>
+        </view>
+        <view class="recomend">
+          <text>{{item.recomend}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view hidden="{{tabCur !== 1}}">
+
+  </view>
+
+
+</view>

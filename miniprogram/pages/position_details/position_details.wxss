@@ -1,0 +1,341 @@
+/* pages/position_details/position_details.wxss */
+.container {
+  padding: 0 30rpx;
+  background-color: white;
+}
+.position-info {
+  border-bottom: 1px solid #f1f1f1;
+  /* border-top: 1px solid #F1F1F1; */
+
+  padding: 20rpx 0;
+}
+.position-info_top {
+  padding: 0 0 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.position-name {
+  font-family: "microsoft yahei";
+  font-size: 50rpx;
+  font-weight: 515;
+}
+.position-de {
+  font-size: 33rpx;
+  color: #2295ff;
+  border: #2295ff 1px solid;
+  line-height: 33px;
+  border-radius: 10rpx;
+  padding: 5rpx;
+}
+.position-info_bottom {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.position-info_list {
+  font-size: 25rpx;
+  line-height: 50rpx;
+}
+.position-info_item {
+  padding: 7rpx;
+  background-color: #f1f1f7;
+  margin-right: 20rpx;
+  border-radius: 7rpx;
+}
+.position-info_price {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #ff6d58;
+}
+.head-portrait {
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 100%;
+}
+.boss-left {
+  display: flex;
+  align-items: center;
+}
+.boss {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+.pic {
+  margin-right: 10rpx;
+}
+.boss-name {
+  font-size: 30rpx;
+  font-family: "microsoft yahei";
+}
+.boss-state {
+  font-size: 25rpx;
+  font-family: "microsoft yahei";
+  color: #afafaf;
+  margin: 10rpx 0;
+
+  margin-left: 25rpx;
+}
+.company-name {
+  font-size: 30rpx;
+  font-family: microsoft yahei;
+  font-weight: 500;
+}
+.company-mark {
+  background-color: #ff6d58;
+  color: white;
+  font-size: 25rpx;
+  padding: 5rpx;
+  margin-left: 10rpx;
+  border-radius: 50%;
+}
+.right-pic {
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 30rpx;
+}
+.boss-right {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+.position-intro_item {
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* border-left: tomato 1px solid; */
+}
+.position-intro_topic {
+  font-size: 27rpx;
+  color: #aaaaaa;
+}
+.position-intro_content {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.position-intro_list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 40rpx 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+.position-intro_item:nth-child(2) {
+  border-left: 1px solid #d1cfcf;
+  /* height: 60rpx */
+}
+.position-intro_item:nth-child(2) {
+  border-right: 1px solid #d1cfcf;
+  /* height: 60rpx */
+}
+.position-intro_item:nth-child(3) {
+  border-right: 1px solid #d1cfcf;
+  /* height: 60rpx */
+}
+.describe {
+  font-size: 40rpx;
+  font-weight: 535;
+  padding: 40rpx 0;
+  font-family: "microsoft yahei";
+  /* border-bottom: 1px solid #d1cfcf; */
+}
+.describe_list-item {
+  display: flex;
+  margin-bottom: 40rpx;
+  font-size: 33rpx;
+  font-family: 微软雅黑;
+  align-items: baseline;
+  justify-content: unset;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #e9e8e8;
+}
+.describe-item-topic {
+  width: 150rpx;
+  /* width: 20%; */
+
+  /* flex-wrap: nowrap; */
+  /* height: 150rpx; */
+}
+.describe_list {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+.describe-item-content {
+  height: fit-content;
+}
+.position-pic {
+  width: 100%;
+  height: 400rpx;
+}
+.location {
+  display: flex;
+  justify-content: space-between;
+  color: #666666;
+  padding: 10rpx 0;
+}
+.see-img {
+  width: 40rpx;
+  height: 40rpx;
+}
+.see_pic {
+  display: flex;
+  align-items: center;
+}
+.viewed {
+  margin-left: 10rpx;
+}
+.recommended_title {
+  padding: 30rpx 0;
+  font-size: 40rpx;
+  font-weight: 500;
+  border-bottom: solid 1px rgb(228, 225, 225);
+  border-top: solid 1px rgb(228, 225, 225);
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.recommended-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+}
+.recommended-price {
+  color: tomato;
+}
+.recommended-info_list {
+  display: flex;
+  font-size: 25rpx;
+  color: silver;
+}
+.recommended-center {
+  display: flex;
+  flex-direction: column;
+}
+.recommended-center {
+  margin: 10rpx 0;
+}
+.requirements-list_item {
+  font-size: 30rpx;
+  color: slategray;
+  /* line-height: 40rpx; */
+}
+.recommended-requirements-list {
+  /* height: 20rpx; */
+  padding: 10rpx 0;
+}
+.requirements-list_item:nth-child(2) {
+  border-left: slategray 1px solid;
+  border-right: slategray 1px solid;
+  padding: 0 10rpx;
+  margin: 0 10rpx;
+}
+.recommended-bottom-portrait {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.recommended-bottom-left {
+  display: flex;
+  align-items: center;
+}
+.name {
+  margin: 0 20rpx;
+}
+.recommended-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.recommended {
+}
+.recommended-list {
+  padding: 0 0 30rpx 0;
+}
+.recommended-list_item {
+  border-bottom: solid 1px rgb(228, 225, 225);
+  padding: 25rpx 0;
+}
+.navigationbar-bottom{
+    width: 670rpx;
+    height: 100rpx;
+    padding: 10rpx;
+    font-size: 35rpx;
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+}
+.phone-pic{
+    height: 50rpx;
+    width: 50rpx;
+    margin-right: 10rpx;
+}
+.connect{
+    margin-left: 10rpx;
+
+}
+.navigationbar{
+    /* background-color: #2295FF; */
+    /* height: 80rpx;
+ 
+    justify-content: center;
+   */
+  border-top: solid 1px rgb(228, 225, 225);
+
+   display: flex;
+   align-items: center;
+    
+}
+.space{
+    height: 120rpx;
+}
+.icon-fenxiang,.icon-shoucang{
+  height: 40rpx;
+  width: 40rpx;
+}
+.icon-xiaoxi{
+  height: 50rpx;
+  width: 50rpx;
+}
+.fav,.send{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 30rpx;
+
+
+}
+.navigationbar--left{
+  font-size: 25rpx;
+}
+.navigationbar--left{
+  display: flex;
+  align-items: center;
+
+}
+.navigationbar-bottom{
+  background-color: white;
+  border-top: whitesmoke;
+}
+.navigationbar--right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400rpx;
+  background-color: rgb(42, 90, 199);
+  color: white;
+  padding: 20rpx;
+  border-radius: 10rpx;
+
+
+
+}
+
+.icon-xiaoxi{
+  margin-right: 10rpx;
+}
+.fav--msg{
+  margin-right: 10rpx;
+}

@@ -1,0 +1,123 @@
+<!--pages/index/index.wxml-->
+
+<!-- 导航栏 -->
+<view>
+  <scroll-view scroll-x class="navbar" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+    <view class="nav-item" wx:for="{{tabs}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
+      <view class="nav-text {{index==tabCur?'tab-on':''}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <!-- 关注 -->
+  <view class="guanzhu" hidden="{{tabCur !== 0}}">
+    <view class="container">
+  <card-swipe wx:if="{{cards.length > 0}}" generic:card="card" class="card-swipe"        bind:cardSwipe="cardSwipe"
+    cards="{{cards}}" removed-cards="{{removed_cards}}" show-cards="{{show_cards}}" slide-thershold="{{thershold}}"
+    transition="{{transition}}" scale-ratio="{{scale_ratio}}" circling="{{circling}}" 
+    up-height="{{up_height}}"
+    rotate-deg="{{rotate_deg}}" slide-duration="{{slide_duration}}"></card-swipe>
+  <!-- 设置 -->
+  <view class="settings" style="display: none;">
+    <view class="label btn-area">
+      <text data-symbol="add" bind:tap="cardOperate">添加卡片</text>
+      <text decode="{{true}}">&emsp;</text>
+      <text data-symbol="reset" bind:tap="cardOperate">重置卡片</text>
+    </view>
+    <view class="label btn-area">
+      <view style="white-space: nowrap;">删除卡片</view>
+      <view style="display: flex; flex: 1; overflow-x: scroll;">
+        <block wx:for="{{cards}}" wx:for-item="card" wx:key="index">
+          <view wx:if="{{card}}" class="rm-card {{index === (current_cursor || 0) ? 'disable' : ''}}"
+            data-remove-index="{{index}}" data-symbol="remove" bind:tap="cardOperate">
+            {{index + 1}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="page__ft">
+    <image class="notlike {{left?'active':''}}" src="../../images/notlike.png" />
+    <image class="like {{right?'active':''}}" src="../../images/like.png" />
+  </view>
+  <view class="settings">
+    <text class="label">列表循环：</text>
+    <switch class="setting" checked="{{circling}}" data-symbol="loop" bindchange="onSwitch" />
+    <text class="label">过渡动画：</text>
+    <switch class="setting" checked="{{transition}}" data-symbol="transition" bindchange="onSwitch" />
+  </view>
+  <view class="settings">
+    <text class="label">展示卡片：</text>
+    <slider class="setting" value="{{show_cards}}" data-symbol="show_cards" bindchange="onSlide" min="1"
+      max="{{cards.length}}" show-value />
+  </view>
+  <view class="settings">
+    <text class="label">旋转角度：</text>
+    <slider class="setting" value="{{rotate_deg}}" data-symbol="rotate_deg" bindchange="onSlide" min="-180" max="180"
+      show-value />
+  </view>
+  <view class="settings">
+    <text class="label">滑动时长：</text>
+    <slider class="setting" value="{{slide_duration}}" data-symbol="slide_duration" step="100" bindchange="onSlide"
+      min="100" max="2000" show-value />
+  </view>
+</view>
+  </view>
+  <!-- 推荐 -->
+  <view class="tuijian" hidden="{{tabCur !== 1}}">
+    <view class="tuijianmiddle" wx:for="{{talk}}" wx:key="item">
+      <view class="guanzhutwoin">
+        <image src="{{item.picture}}" class="touxiang"></image>
+        <view class="guanzhutwoon">
+          <text class="guanzhutwotext1">{{item.name}}</text>
+          <text class="guanzhutwotext2">{{item.companies}}</text>
+        </view>
+      </view>
+      <view class="tuijiantwotext">
+        <text>{{item.detail}}</text>
+      </view>
+      <view>
+        <van-icon name="good-job-o" size="40rpx" class="zan" color="gray" />
+        <van-icon name="comment-o" size="36rpx" class="pinglun" color="gray" />
+      </view>
+    </view>
+
+  </view>
+  <view class="haowen" hidden="{{tabCur !== 2}}">
+    <navigator class="haowen_text" url="../detail/detail" wx:for="{{haowen}}" wx:key="id" hover-class="none">
+      <text class="haowen_title">{{item.title}}</text>
+      <text class="haowen_zuozhe">{{item.zuozhe}}</text>
+      <view class="haowen_all">
+        <view class="haowen_neirongbox">
+          <text class="haowen_neirong">{{item.text}}</text>
+        </view>
+        <image src="{{item.src}}" class="haowen_img"></image>
+      </view>
+      <view class="haowen_bottom">
+        <text>{{item.read}} 阅读 ·</text>
+        <text>{{item.pinglun}} 评论 ·</text>
+        <text>{{item.shoucang}} 收藏</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="dengni" hidden="{{tabCur !== 3}}">
+    <view class="wait" wx:for="{{wait}}" wx:key="id" data-id="{{item.id}}">
+      <view class="waittop">
+        <text class="wait_title">{{item.title}}</text>
+      </view>
+      <view class="wait_content">
+        <image src="{{item.img}}"></image>
+        <text class="wait_name">{{item.name}}</text>
+        <text class="wait_zhiwei">{{item.zhiwei}}</text>
+      </view>
+      <view class="wait_number">
+        <view bindtap="haveHd" data-title="{{item.title}}" data-id="{{item.id}}" class="havein">
+          <text class="wait_number">{{item.number}}</text>
+          <van-icon name="arrow" class="wait_back" />
+        </view>
+        <button class="wait_btn" bindtap="waitBtn" data-id="{{item.id}}">{{item.btn}}</button>
+      </view>
+    </view>
+  </view>
+  <view class="quanzi" hidden="{{tabCur !== 4}}">
+
+  </view>
+</view>

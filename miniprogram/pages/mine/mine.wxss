@@ -1,0 +1,166 @@
+.bgImg {
+  width: 100%;
+  height: 100 rpx;
+}
+
+.photo {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 20px;
+  top: -5px;
+  border-radius: 50px;
+}
+
+.name {
+  position: relative;
+  left: 70rpx;
+  top: -60rpx;
+}
+
+.mine-box-middle-tittle,
+.box-list {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.mine-container-middle,
+.mine-container-bottom {
+  position: relative;
+  top: -50px;
+  border-radius: 20rpx;
+  width: 650rpx;
+  margin-left: 40rpx;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  background-color: white;
+  margin-bottom: 30rpx;
+  box-shadow: 0 1rpx 15rpx 1rpx rgb(175, 169, 169);
+}
+.button{
+  position: relative;
+  float: right;
+  padding-top: 23px;
+  font-size: 15px;
+}
+
+.login {
+  padding-bottom:20px ;
+  
+  line-height: 1.41176471;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+.mine-box-bottom {
+  margin-top: 30rpx;
+  width: 120rpx;
+  height: 100rpx;
+  margin-right: 50rpx;
+  text-align: center;
+}
+
+.mine-box-det {
+  width: 375rpx;
+}
+
+.mine-box-bottom-number {
+  font-weight: 600;
+}
+
+.mine-box-bottom-doc {
+  font-size: 25rpx;
+  color: #777777;
+}
+
+
+.middle-tittle-left,
+.box-middle-list {
+  font-size: 35rpx;
+  font-weight: 600;
+  margin-right: 370rpx;
+}
+
+.middle-tittle-right {
+  margin-top: 10rpx;
+  color: #777777;
+  font-size: 25rpx;
+}
+
+.middle-tittle-img {
+  margin-left: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.middle-list-img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.box-list-doc {
+  font-size: 25rpx;
+}
+
+.box-list-cular {
+  height: 160rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  margin-right: 50rpx;
+}
+
+.bottom-body-leftImg {
+  position: absolute;
+  height: 40rpx;
+  width: 40rpx;
+  margin-top: 3rpx;
+}
+
+.bottom-body-rightImg {
+  height: 20rpx;
+  width: 20rpx;
+  position: absolute;
+  margin-top: 12rpx;
+}
+
+.bottom-body-doc {
+  margin-left: 55rpx;
+  font-size: 30rpx;
+  width: 550rpx;
+  font-weight: 500;
+
+}
+
+.bottom-body-single-doc {
+  font-size: 25rpx;
+  color: #777777;
+  position: absolute;
+  margin: 5rpx 0 0 420rpx;
+}
+
+.container-bottom-body {
+  padding-top: 20rpx;
+  /* padding-bottom: 50rpx; */
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20rpx;
+}
+
+.add-blank {
+  height: 30rpx;
+}
+
+.bottom-blank {
+  height: 150rpx;
+}
+
+.bottom-body-single-doc2 {
+  font-size: 25rpx;
+  color: red;
+  position: absolute;
+  margin: 5rpx 0 0 380rpx;
+}
